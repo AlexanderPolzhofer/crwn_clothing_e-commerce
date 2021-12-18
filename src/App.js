@@ -6,7 +6,7 @@ import ShopPage from './components/shop/ShopPage.component';
 
 function App() {
   return (
-    <div>
+    <div className='body'>
 
       <Routes>
         <Route path="/home" element={<Homepage />} />
