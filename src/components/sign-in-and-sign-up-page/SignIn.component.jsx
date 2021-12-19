@@ -1,5 +1,6 @@
 import React from 'react';
 import FormInput from './FormInput.component';
+import './SignIn.component.scss';
 
 class SignIn extends React.Component {
 
