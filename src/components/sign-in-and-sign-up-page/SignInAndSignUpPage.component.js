@@ -1,13 +1,21 @@
 import React from 'react';
+
 import SignIn from '../sign-in/SignIn.component';
-import './SignInAndSignUpPage.component.scss';
+import SignUp from '../sign-up/SignUp.component';
+
+import './sign-in-and-sign-up.styles.scss';
 
 const SignInAndSignUp = () => {
     return (
+
         <div className='sign-in-and-sign-up'>
-            <h3>SIGN IN</h3>
             <SignIn />
+
+            <SignUp />
         </div>
+
+
+
     );
 }
 
