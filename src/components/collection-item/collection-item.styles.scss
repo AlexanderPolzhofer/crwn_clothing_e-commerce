@@ -4,6 +4,7 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
 
   .image {
     width: 100%;
@@ -12,6 +13,24 @@
     background-position: center;
     margin-bottom: 5px;
   }
+
+  .custom-button{
+    opacity: 0.8;
+    width: 80%;
+    top: 255px;
+    position:absolute;
+    display: none;
+  }
+
+    &:hover{
+      .image{
+        opacity: 0.8;
+      }
+
+      .custom-button{
+        display: flex;
+      }
+    }
 
   .collection-footer {
     width: 100%;
@@ -23,10 +42,6 @@
     .name {
       width: 90%;
       margin-bottom: 15px;
-    }
-
-    .price {
-      width: 10%;
     }
   }
 }
