@@ -20,7 +20,6 @@ ReactDOM.render(
           <App />
         </React.StrictMode>
       </PersistGate>
-
     </BrowserRouter>
   </Provider>
   ,

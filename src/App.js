@@ -7,6 +7,7 @@ import ShopPage from './pages/shop/ShopPage.component';
 import Header from './components/header/Header.component';
 import CheckoutPage from './pages/checkout/checkout-page.component';
 
+
 import SignInAndSignUp from './components/sign-in-and-sign-up-page/SignInAndSignUpPage.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
@@ -14,6 +15,7 @@ import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { createStructuredSelector } from 'reselect';
+import CollectionPage from './pages/collection/collection.component';
 
 class App extends React.Component {
 
@@ -45,16 +47,17 @@ class App extends React.Component {
   }
 
   render() {
+
     return (
       <div className='body' >
         <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route exact path="/sign" element={this.props.currentUser ? <Navigate to='/' /> : <SignInAndSignUp />} />
+          <Route path='/shop/:collectionId' element={<CollectionPage />} />
+          <Route path="/signin" element={this.props.currentUser ? <Navigate to='/' /> : <SignInAndSignUp />} />
           <Route path='/checkout' element={<CheckoutPage />} />
         </Routes>
-
       </div>
     );
   }
