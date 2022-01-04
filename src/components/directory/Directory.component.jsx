@@ -8,14 +8,10 @@ import { selectDirectorySections } from '../../redux/directory/directory.selecto
 
 const Directory = ({ sections }) => {
 
-    const handleClick = () => {
-        console.log('clicked: ')
-    }
-
     return (
-        <div className='directory-menu' onClick={() => handleClick()}>
-            {sections.map(({ title, imageUrl, id, size }) =>
-                (<MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />)
+        <div className='directory-menu'>
+            {sections.map(({ title, imageUrl, id, size, linkUrl }) =>
+                (<MenuItem key={id} title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl} />)
             )
             }
         </div>);
