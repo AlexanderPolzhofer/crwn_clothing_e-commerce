@@ -10,7 +10,7 @@ const ShopPage = () => {
         if (location.pathname === '/shop') {
             return <CollectionsOverview />;
         } else {
-            <Outlet />
+            return <Outlet />;
         }
     }
 
